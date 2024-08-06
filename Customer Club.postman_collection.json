@@ -1,0 +1,1509 @@
+{
+	"info": {
+		"_postman_id": "613049e6-05f7-49d4-9cee-ad94e01b811f",
+		"name": "Customer Club",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25486649"
+	},
+	"item": [
+		{
+			"name": "Customers",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/customers/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"customers",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/customers/",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"customers",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 06 Aug 2024 14:09:18 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "601"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 3,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 14,\n            \"name\": \"milad\",\n            \"email\": \"mohammadian@gmail.com\",\n            \"phone\": \"09382061246\",\n            \"loyalty_score\": 0,\n            \"created_at\": \"2024-08-06T14:05:16.076479Z\",\n            \"updated_at\": \"2024-08-06T14:05:16.076526Z\"\n        },\n        {\n            \"id\": 15,\n            \"name\": \"mehrdad\",\n            \"email\": \"m.mohammadian@gmail.com\",\n            \"phone\": \"09382061246\",\n            \"loyalty_score\": 0,\n            \"created_at\": \"2024-08-06T14:07:41.499312Z\",\n            \"updated_at\": \"2024-08-06T14:07:41.499356Z\"\n        },\n        {\n            \"id\": 16,\n            \"name\": \"Arash\",\n            \"email\": \"a.latifi@gmail.com\",\n            \"phone\": \"09190671975\",\n            \"loyalty_score\": 0,\n            \"created_at\": \"2024-08-06T14:09:05.400341Z\",\n            \"updated_at\": \"2024-08-06T14:09:05.400372Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/customers/:customer_id",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"customers",
+								":customer_id"
+							],
+							"variable": [
+								{
+									"key": "customer_id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/customers/:customer_id",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"customers",
+										":customer_id"
+									],
+									"variable": [
+										{
+											"key": "customer_id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 06 Aug 2024 14:09:49 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "182"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 14,\n    \"name\": \"milad\",\n    \"email\": \"mohammadian@gmail.com\",\n    \"phone\": \"09382061246\",\n    \"loyalty_score\": 0,\n    \"created_at\": \"2024-08-06T14:05:16.076479Z\",\n    \"updated_at\": \"2024-08-06T14:05:16.076526Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/customers/search/?query=mehrdad",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"customers",
+								"search",
+								""
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "mehrdad"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/customers/search/?query=mehrdad",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"customers",
+										"search",
+										""
+									],
+									"query": [
+										{
+											"key": "query",
+											"value": "mehrdad"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 06 Aug 2024 14:10:25 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "102"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 15,\n        \"name\": \"mehrdad\",\n        \"email\": \"m.mohammadian@gmail.com\",\n        \"phone\": \"09382061246\",\n        \"loyalty_score\": 0\n    }\n]"
+						},
+						{
+							"name": "Erorr",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/customers/search/?query=",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"customers",
+										"search",
+										""
+									],
+									"query": [
+										{
+											"key": "query",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 06 Aug 2024 14:10:57 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"No query parameter provided.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"milad\",\n    \"email\": \"mohammadian@gmail.com\",\n    \"phone\": \"09382061246\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/customers/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"customers",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"milad\",\n    \"email\": \"mohammadian@gmail.com\",\n    \"phone\": \"09382061246\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/customers/",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"customers",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 06 Aug 2024 14:05:16 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "182"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 14,\n    \"name\": \"milad\",\n    \"email\": \"mohammadian@gmail.com\",\n    \"phone\": \"09382061246\",\n    \"loyalty_score\": 0,\n    \"created_at\": \"2024-08-06T14:05:16.076479Z\",\n    \"updated_at\": \"2024-08-06T14:05:16.076526Z\"\n}"
+						},
+						{
+							"name": "Erorr",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"milad\",\n    \"email\": \"mohammadian@gmail.com\",\n    \"phone\": \"09382061246\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/customers/",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"customers",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 06 Aug 2024 14:06:18 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email\": [\n        \"customer with this Email already exists.\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"mehrdad\",\n    \"email\": \"m.mohammadian@gmail.com\",\n    \"phone\": \"09127654598\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/customers/:customer_id/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"customers",
+								":customer_id",
+								""
+							],
+							"variable": [
+								{
+									"key": "customer_id",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"mehrdad\",\n    \"email\": \"m.mohammadian@gmail.com\",\n    \"phone\": \"09127654598\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/customers/:customer_id/",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"customers",
+										":customer_id",
+										""
+									],
+									"variable": [
+										{
+											"key": "customer_id",
+											"value": "15"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 06 Aug 2024 14:14:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "186"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 15,\n    \"name\": \"mehrdad\",\n    \"email\": \"m.mohammadian@gmail.com\",\n    \"phone\": \"09127654598\",\n    \"loyalty_score\": 0,\n    \"created_at\": \"2024-08-06T14:07:41.499312Z\",\n    \"updated_at\": \"2024-08-06T14:14:44.838504Z\"\n}"
+						},
+						{
+							"name": "Erorr",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"mehrdad\",\n    \"email\": \"mohammadian@gmail.com\",\n    \"phone\": \"09127654598\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/customers/:customer_id/",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"customers",
+										":customer_id",
+										""
+									],
+									"variable": [
+										{
+											"key": "customer_id",
+											"value": "15"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 06 Aug 2024 14:15:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email\": [\n        \"customer with this Email already exists.\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/customers/:customer_id/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"customers",
+								":customer_id",
+								""
+							],
+							"variable": [
+								{
+									"key": "customer_id",
+									"value": "16"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transactions",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/transactions/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"transactions",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/transactions/",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"transactions",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 06 Aug 2024 14:29:08 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "959"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 3,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 1,\n            \"customer\": 14,\n            \"amount\": \"1000000.00\",\n            \"description\": \"test\",\n            \"customer_info\": {\n                \"id\": 14,\n                \"name\": \"milad\",\n                \"email\": \"mohammadian@gmail.com\",\n                \"phone\": \"09382061246\",\n                \"loyalty_score\": 2,\n                \"created_at\": \"2024-08-06T14:05:16.076479Z\",\n                \"updated_at\": \"2024-08-06T14:27:47.450806Z\"\n            },\n            \"date\": \"2024-08-06T14:24:41.758596Z\"\n        },\n        {\n            \"id\": 2,\n            \"customer\": 14,\n            \"amount\": \"1000000.00\",\n            \"description\": \"200\",\n            \"customer_info\": {\n                \"id\": 14,\n                \"name\": \"milad\",\n                \"email\": \"mohammadian@gmail.com\",\n                \"phone\": \"09382061246\",\n                \"loyalty_score\": 2,\n                \"created_at\": \"2024-08-06T14:05:16.076479Z\",\n                \"updated_at\": \"2024-08-06T14:27:47.450806Z\"\n            },\n            \"date\": \"2024-08-06T14:27:47.421509Z\"\n        },\n        {\n            \"id\": 3,\n            \"customer\": 15,\n            \"amount\": \"250000.00\",\n            \"description\": \"test\",\n            \"customer_info\": {\n                \"id\": 15,\n                \"name\": \"mehrdad\",\n                \"email\": \"m.mohammadian@gmail.com\",\n                \"phone\": \"09127654598\",\n                \"loyalty_score\": 1,\n                \"created_at\": \"2024-08-06T14:07:41.499312Z\",\n                \"updated_at\": \"2024-08-06T14:28:36.678173Z\"\n            },\n            \"date\": \"2024-08-06T14:28:36.647909Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/transactions/:transaction_id",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"transactions",
+								":transaction_id"
+							],
+							"variable": [
+								{
+									"key": "transaction_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/transactions/:transaction_id",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"transactions",
+										":transaction_id"
+									],
+									"variable": [
+										{
+											"key": "transaction_id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 06 Aug 2024 14:30:23 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "300"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"customer\": 14,\n    \"amount\": \"1000000.00\",\n    \"description\": \"200\",\n    \"customer_info\": {\n        \"id\": 14,\n        \"name\": \"milad\",\n        \"email\": \"mohammadian@gmail.com\",\n        \"phone\": \"09382061246\",\n        \"loyalty_score\": 2,\n        \"created_at\": \"2024-08-06T14:05:16.076479Z\",\n        \"updated_at\": \"2024-08-06T14:27:47.450806Z\"\n    },\n    \"date\": \"2024-08-06T14:27:47.421509Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/transactions/search/?amount__lte=750000&date__gte=2024-08-05",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"transactions",
+								"search",
+								""
+							],
+							"query": [
+								{
+									"key": "amount__lte",
+									"value": "750000"
+								},
+								{
+									"key": "date__gte",
+									"value": "2024-08-05"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Search By Amount 1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/transactions/search/?amount=250000",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"transactions",
+										"search",
+										""
+									],
+									"query": [
+										{
+											"key": "amount",
+											"value": "250000"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 06 Aug 2024 14:34:06 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "225"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"facets\": {},\n    \"results\": [\n        {\n            \"id\": 3,\n            \"amount\": 250000,\n            \"date\": \"2024-08-06T14:28:36.647909+00:00\",\n            \"description\": \"test\",\n            \"customer\": {\n                \"id\": 15,\n                \"name\": \"mehrdad\",\n                \"email\": \"m.mohammadian@gmail.com\"\n            }\n        }\n    ]\n}"
+						},
+						{
+							"name": "Search By Amount 2",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/transactions/search/?amount__gte=500000&amount__lte=32000000",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"transactions",
+										"search",
+										""
+									],
+									"query": [
+										{
+											"key": "amount__gte",
+											"value": "500000"
+										},
+										{
+											"key": "amount__lte",
+											"value": "32000000"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 06 Aug 2024 14:39:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "380"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 2,\n    \"next\": null,\n    \"previous\": null,\n    \"facets\": {},\n    \"results\": [\n        {\n            \"id\": 1,\n            \"amount\": 1000000,\n            \"date\": \"2024-08-06T14:24:41.758596+00:00\",\n            \"description\": \"test\",\n            \"customer\": {\n                \"id\": 14,\n                \"name\": \"milad\",\n                \"email\": \"mohammadian@gmail.com\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"amount\": 1000000,\n            \"date\": \"2024-08-06T14:27:47.421509+00:00\",\n            \"description\": \"200\",\n            \"customer\": {\n                \"id\": 14,\n                \"name\": \"milad\",\n                \"email\": \"mohammadian@gmail.com\"\n            }\n        }\n    ]\n}"
+						},
+						{
+							"name": "Search By Amount And Date",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/transactions/search/?amount__lte=750000&date__gte=2024-08-05",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"transactions",
+										"search",
+										""
+									],
+									"query": [
+										{
+											"key": "amount__lte",
+											"value": "750000"
+										},
+										{
+											"key": "date__gte",
+											"value": "2024-08-05"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 06 Aug 2024 14:53:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "225"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"facets\": {},\n    \"results\": [\n        {\n            \"id\": 3,\n            \"amount\": 250000,\n            \"date\": \"2024-08-06T14:28:36.647909+00:00\",\n            \"description\": \"test\",\n            \"customer\": {\n                \"id\": 15,\n                \"name\": \"mehrdad\",\n                \"email\": \"m.mohammadian@gmail.com\"\n            }\n        }\n    ]\n}"
+						},
+						{
+							"name": "Search By Date",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/transactions/search/?date__gte=2024-08-06T14:25",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"transactions",
+										"search",
+										""
+									],
+									"query": [
+										{
+											"key": "date__gte",
+											"value": "2024-08-06T14:25"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 06 Aug 2024 14:58:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "383"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 2,\n    \"next\": null,\n    \"previous\": null,\n    \"facets\": {},\n    \"results\": [\n        {\n            \"id\": 2,\n            \"amount\": 1000000,\n            \"date\": \"2024-08-06T14:27:47.421509+00:00\",\n            \"description\": \"200\",\n            \"customer\": {\n                \"id\": 14,\n                \"name\": \"milad\",\n                \"email\": \"mohammadian@gmail.com\"\n            }\n        },\n        {\n            \"id\": 3,\n            \"amount\": 250000,\n            \"date\": \"2024-08-06T14:28:36.647909+00:00\",\n            \"description\": \"test\",\n            \"customer\": {\n                \"id\": 15,\n                \"name\": \"mehrdad\",\n                \"email\": \"m.mohammadian@gmail.com\"\n            }\n        }\n    ]\n}"
+						},
+						{
+							"name": "Ordering",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/transactions/search/?ordering=-date",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"transactions",
+										"search",
+										""
+									],
+									"query": [
+										{
+											"key": "ordering",
+											"value": "-date"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 06 Aug 2024 15:19:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "542"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 3,\n    \"next\": null,\n    \"previous\": null,\n    \"facets\": {},\n    \"results\": [\n        {\n            \"id\": 3,\n            \"amount\": 250000,\n            \"date\": \"2024-08-06T14:28:36.647909+00:00\",\n            \"description\": \"test\",\n            \"customer\": {\n                \"id\": 15,\n                \"name\": \"mehrdad\",\n                \"email\": \"m.mohammadian@gmail.com\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"amount\": 1000000,\n            \"date\": \"2024-08-06T14:27:47.421509+00:00\",\n            \"description\": \"200\",\n            \"customer\": {\n                \"id\": 14,\n                \"name\": \"milad\",\n                \"email\": \"mohammadian@gmail.com\"\n            }\n        },\n        {\n            \"id\": 1,\n            \"amount\": 1000000,\n            \"date\": \"2024-08-06T14:24:41.758596+00:00\",\n            \"description\": \"test\",\n            \"customer\": {\n                \"id\": 14,\n                \"name\": \"milad\",\n                \"email\": \"mohammadian@gmail.com\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\": 1000000,\n    \"description\": \"test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/customers/:customer_id/transactions/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"customers",
+								":customer_id",
+								"transactions",
+								""
+							],
+							"variable": [
+								{
+									"key": "customer_id",
+									"value": "14"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\": 1000000,\n    \"description\": \"test\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/customers/:customer_id/transactions/",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"customers",
+										":customer_id",
+										"transactions",
+										""
+									],
+									"variable": [
+										{
+											"key": "customer_id",
+											"value": "14"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 06 Aug 2024 14:24:41 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "301"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"customer\": 14,\n    \"amount\": \"1000000.00\",\n    \"description\": \"test\",\n    \"customer_info\": {\n        \"id\": 14,\n        \"name\": \"milad\",\n        \"email\": \"mohammadian@gmail.com\",\n        \"phone\": \"09382061246\",\n        \"loyalty_score\": 1,\n        \"created_at\": \"2024-08-06T14:05:16.076479Z\",\n        \"updated_at\": \"2024-08-06T14:24:41.927707Z\"\n    },\n    \"date\": \"2024-08-06T14:24:41.758596Z\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
